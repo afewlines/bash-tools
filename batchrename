@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ "$#" -lt 1 ]; then
+  echo Usage: batchrename [ prefix ]
+  exit 0
+fi
+
+prefix=$1
+itr=0
+
+for filename in *.jpg; do
+    let itr++
+    mv $filename "$prefix"_$(printf "%03d" $itr).jpg
+done

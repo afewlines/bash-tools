@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ -e $1 ]; then
+  echo Moving to local \"$1\"
+  cdd $1
+  return
+fi
+
+if [ -e "`cat ~/.bookmarks/$1`" ]; then
+  echo Moving to bookmark \"$1\"
+  cdd "`cat ~/.bookmarks/$1`"
+  return
+fi
