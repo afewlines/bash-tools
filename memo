@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$#" -ge 1 ]; then
+  echo $* >> ~/.memo
+  echo "Added to memo"
+else
+  cat ~/.memo
+fi

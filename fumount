@@ -2,10 +2,12 @@
 
 if [ "$#" -eq 0 ]; then
   if [ -e "/Volumes/sshfs" ]; then
-      umount /Volumes/sshfs
-      sudo chmod 775 /Volumes
+    umount /Volumes/sshfs
+    sudo chmod 775 /Volumes
   else
-      echo SSHFS is not mounted.
-      echo Use "fmount [server]" to mount.
+    echo "SSHFS is not mounted."
+    echo "Use 'fmount [ user@server ]' to mount."
   fi
+else
+  echo "Usage: fumount"
 fi
