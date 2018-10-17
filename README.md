@@ -17,26 +17,17 @@ usage: bookmark [ name ]
 adds bookmark of current directory to ~/.bookmarks with name
 best when used with smartGo
 
-## 'ex8'
-usage: copy something and then run the command
-probably only works on mac but i haven't tested
-it's in c++ i think but i don't even remember writing it
-but i know i did because i used to do the same thing on my old computer
-and yes it was to flame people on league
-
-it turns 'text like this' into 't e x t   l i k e   t h i s'
-
 ## 'fmount'
-usage: fmount [ user@server ]
+usage: fuse [ user@server ]
 can use ssh alias (through .ssh/config)
 
 uses FUSE for macOS to mount a server connection as a local drive
 i started adding more to it but i never did and i don't remember what i wanted to add
 
 ## 'fumount'
-usage: fumount
+usage: unfuse
 
-makes sure connection/volume from fmount are gone
+makes sure connection/volume from fused connections are gone
 
 ## 'memo'
 usage: memo [ whatever you want to write in the memo ]
@@ -45,7 +36,7 @@ adds whatever you want to write in the memo to the memo in your home directory
 surprising, right
 
 ## 'smartGo'
-usage: smartGo [ destination ]
+usage: go [ destination ]
 
 so this is my fav lil thing cause it works great w bookmarks
 first, it checks to see if destination dir in the current directory
@@ -58,7 +49,7 @@ makes use of a steazy function called 'cdd' which is an aesthetic cd with an ls 
 i plan on adding a history/back/forward bit but i'm lazy
 
 ## 'uploadto'
-usage: uploadto [ user@server ] [ file ]
+usage: upload [ user@server ] [ file ]
 
 easy to use scp thing because i wanted to be like 'okay i'm uploading to this place, with this file'
 otherwise completely useless :)

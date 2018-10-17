@@ -1,13 +1,15 @@
 #!/bin/sh
 
-if [ "$#" -eq 0 ]; then
-  if [ -e "/Volumes/sshfs" ]; then
-    umount /Volumes/sshfs
-    sudo chmod 775 /Volumes
+unfuse() {
+  if [ "$#" -eq 0 ]; then
+    if [ -e "/Volumes/sshfs" ]; then
+      umount /Volumes/sshfs
+      sudo chmod 775 /Volumes
+    else
+      echo "SSHFS is not mounted."
+      echo "Use 'fuse [ user@server ]' to mount."
+    fi
   else
-    echo "SSHFS is not mounted."
-    echo "Use 'fmount [ user@server ]' to mount."
+    echo "Usage: unfuse"
   fi
-else
-  echo "Usage: fumount"
-fi
+}
